@@ -1,0 +1,9 @@
+.container
+  .header
+    %h1 Prime number
+    = render 'form'
+  .content
+    - if @primes
+      - @primes.each do |el|
+        %span.badge.badge-inverse= el
+        / # %p.pull-left.prime-item= el

@@ -1,0 +1,7 @@
+= form_for @prime do |f|
+  .input-prepend.input-append
+    %span.add-on from
+    = f.text_field :first, class: 'input-small'
+    %span.add-on to
+    = f.text_field :last, class: 'input-small'
+    = f.submit 'Go!', class: 'btn'

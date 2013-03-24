@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+.container .header {
+  text-align: center;
+}
+.prime-item {
+  margin: 5px;
+}
