@@ -1,25 +1,36 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'haml-rails'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'haml-rails'
+  gem 'less-rails'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails', '~> 2.2.6'
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '2.13.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'
