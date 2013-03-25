@@ -25,6 +25,10 @@ group :development, :test do
   gem 'rspec-rails', '2.13.0'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
 group :production do
   gem 'pg'
 end

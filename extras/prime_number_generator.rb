@@ -34,6 +34,6 @@ class PrimeNumberGenerator
 protected
   
   def valid_natural?(num)
-    num.integer? && (num == 2 || (num.odd? && num > 1))
+    num.is_a?(Integer) && (num == 2 || (num.odd? && num > 1))
   end
 end

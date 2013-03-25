@@ -8,9 +8,9 @@ class PrimesController < ApplicationController
     @prime = Prime.new(params[:prime])
     if @prime.valid?
       @primes = @prime.generate
-      render :show, notice: 'Ok'
+      render :show
     else
-      redirect_to :root, alert: 'False'
+      redirect_to :root, alert: 'Invalid input data!!!'
     end
   end
 end
