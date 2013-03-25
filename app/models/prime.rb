@@ -22,6 +22,11 @@ class Prime
   end
 
   def generate
-    @prime_generator.generate(first.to_i, last.to_i)
+    primes = nil
+    thread = Thread.new do
+      primes = @prime_generator.generate(first.to_i, last.to_i)
+    end
+    thread.join
+    primes
   end
 end

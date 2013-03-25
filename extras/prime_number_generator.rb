@@ -6,8 +6,16 @@ class PrimeNumberGenerator
   
   def generate(first, last)
     primes = []
-    first.upto(last) do |i| 
-      is_prime?(i) and primes << i 
+    if first < last
+      first.upto(last) do |i| 
+        is_prime?(i) and primes << i 
+      end
+    elsif first > last
+      first.downto(last) do |i| 
+        is_prime?(i) and primes << i 
+      end
+    else
+      is_prime?(first) and primes << first
     end
     primes
   end
@@ -18,7 +26,6 @@ class PrimeNumberGenerator
     return true if limit == 2
     (2..limit).each do |i|
       r = num % i
-      puts "#{num} % #{i} = #{r}"
       return false if r == 0
     end
     true
