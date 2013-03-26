@@ -21,7 +21,7 @@ describe PrimeNumberGenerator do
       end
     end
     context "4" do
-      it "should be prime" do
+      it "should not be prime" do
         subject.is_prime?(4).should be_false
       end
     end
