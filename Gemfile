@@ -3,12 +3,8 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
-# Gems used only for assets and not required
-# in production environments by default.
+gem 'thin'
+gem 'active_attr'
 gem 'haml-rails'
 
 group :assets do
@@ -23,6 +19,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.0'
+  gem 'pry-rails'
 end
 
 group :test do

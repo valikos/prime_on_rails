@@ -1,9 +1,16 @@
 .container
   .header
-    %h1 Prime numbers
-    = render 'form'
+    .row-fluid
+      .span6
+        %h1 Prime numbers
+        = render 'form'
+      .span6
+        %h1 Check prime
+        = render 'check_form'
   .content
     - if @primes
+      .well.well-small.text-center
+        Prime numbers: #{@primes.count}
       - @primes.each do |el|
         %span.badge.badge-inverse= el
         / # %p.pull-left.prime-item= el

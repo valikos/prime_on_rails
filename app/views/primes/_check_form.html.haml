@@ -1,0 +1,6 @@
+= form_for @prime, url: is_prime_path, remote: true, method: 'get' do |f|
+  .input-append
+    = f.text_field :number, class: 'input-small'
+    = f.submit 'Check', class: 'btn'
+  #prime-status.hide
+    wewer
