@@ -73,6 +73,7 @@ GEM
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
+    newrelic_rpm (3.6.4.122)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -151,6 +152,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   less-rails
+  newrelic_rpm
   pg
   rails (= 3.2.13)
   rspec-rails (= 2.13.0)
